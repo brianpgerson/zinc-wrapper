@@ -17,7 +17,6 @@ const ZincFetch = require('zinc-fetch');
 function findCheapestPrice (item, preferences) {
     return ZincService.product.getPrices(item)
         .then(response => {
-            let cheapestOffer = false;
             response.offers.each(candidateOffer => {
                 console.log(candidateOffer.price)
                 // ===> 13.37
