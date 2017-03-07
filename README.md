@@ -29,7 +29,7 @@ function findCheapestPrice (item, preferences) {
 }
 ```
 
-See [test cases](https://github.com/brianpgerson/zinc-wrapper/test/zinc-fetch.test.js) for more examples.
+See [test cases](https://github.com/brianpgerson/zinc-wrapper/blob/master/test/zinc-fetch.test.js) for more examples.
 
 
 # API
