@@ -4,12 +4,18 @@
   "description": "It's a node wrapper for zinc",
   "main": "zinc.service.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha -S --ui bdd --recursive ./test --reporter spec"
   },
   "keywords": [
     "zinc",
     "node"
   ],
   "author": "brian gerson",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "lodash": "^4.17.4",
+    "should": "^11.2.0",
+    "sinon": "^1.17.7"
+  }
 }
