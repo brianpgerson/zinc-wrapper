@@ -1,28 +1,18 @@
 
-zinc-wrapper
+zinc-fetch
 ==========
 
-It's a super lightweight module for making requests to the [zinc.io](http://docs.zincapi.com/) API.
-
-
-# Motivation
-
-I wanted to drop a service into my app to handle zinc requests for me.
-
-# Features
-
-- It's small
-- It uses
+It's a super lightweight module for making requests to the [zinc.io](http://docs.zincapi.com/) API. Basically, I wanted to drop a service into my app to handle zinc requests for me, and this seemed small and easy enough to be worth putting up as a package.
 
 # Install
 
-`npm install zinc-wrapper --save`
+`npm install zinc-fetch --save`
 
 
 # Usage
 
 ```javascript
-const ZincWrapper = require('zinc-wrapper');
+const ZincFetch = require('zinc-fetch');
 
 function findCheapestPrice (item, preferences) {
     return ZincService.product.getPrices(item)

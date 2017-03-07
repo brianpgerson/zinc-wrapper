@@ -7,21 +7,21 @@ const Bluebird = require('bluebird'),
          // your api key wherever you manage it
        zincKey = process.env.ZINC_KEY,
              _ = require('lodash'),
-   ZincWrapper = require('../lib/zinc-fetch');
+   ZincFetch = require('../lib/zinc-fetch');
 
 describe('The zinc wrapper', () => {
 
-  	it(`should have its main function wrappers`, () => {
-      	should.exist(ZincWrapper.order);
-        should.exist(ZincWrapper.product);
+  	it(`should have its main domains`, () => {
+      	should.exist(ZincFetch.order);
+        should.exist(ZincFetch.product);
   	});
 
     it(`should have its basic functions`, () => {
-        _.forEach(ZincWrapper.order, func => {
+        _.forEach(ZincFetch.order, func => {
             (func).should.be.a.Function();
         });
 
-        _.forEach(ZincWrapper.product, func => {
+        _.forEach(ZincFetch.product, func => {
             (func).should.be.a.Function();
         });
     });
@@ -30,7 +30,7 @@ describe('The zinc wrapper', () => {
 
         it(`should get product details `, (done) => {
             if (zincKey) {
-                ZincWrapper.product.getDetails('0060512806').then(response => {
+                ZincFetch.product.getDetails('0060512806').then(response => {
                     console.log('response')
                     should.exist(response);
                     should.equal('completed', response.status);
