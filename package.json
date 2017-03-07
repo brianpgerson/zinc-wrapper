@@ -1,0 +1,15 @@
+{
+  "name": "zinc-fetch",
+  "version": "1.0.0",
+  "description": "It's a node wrapper for zinc",
+  "main": "zinc.service.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "zinc",
+    "node"
+  ],
+  "author": "brian gerson",
+  "license": "ISC"
+}
