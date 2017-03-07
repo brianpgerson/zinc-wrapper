@@ -3,6 +3,8 @@
 const Bluebird = require('bluebird'),
         should = require('should'),
          sinon = require('sinon'),
+         // Set your own here, or just make sure that the test can pick up
+         // your api key wherever you manage it
        zincKey = process.env.ZINC_KEY,
              _ = require('lodash'),
    ZincWrapper = require('../lib/zinc-fetch');
@@ -27,9 +29,7 @@ describe('The zinc wrapper', () => {
     describe(`The product functions`, () => {
 
         it(`should get product details `, (done) => {
-            if (!zincKey) {
-
-            } else {
+            if (zincKey) {
                 ZincWrapper.product.getDetails('0060512806').then(response => {
                     console.log('response')
                     should.exist(response);
