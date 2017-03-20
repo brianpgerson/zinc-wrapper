@@ -1,6 +1,6 @@
 {
   "name": "zinc-fetch",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "It's a node wrapper for zinc",
   "main": "zinc.service.js",
   "scripts": {

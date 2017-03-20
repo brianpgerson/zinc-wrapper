@@ -14,8 +14,8 @@ It's a super lightweight module for making requests to the [zinc.io](http://docs
 ```javascript
 const ZincFetch = require('zinc-fetch');
 
-function findCheapestPrice (item, preferences) {
-    return ZincService.product.getPrices(item)
+function findCheapestPrice (itemId) {
+    return ZincService.product.getPrices(itemId)
         .then(response => {
             response.offers.each(candidateOffer => {
                 console.log(candidateOffer.price)
