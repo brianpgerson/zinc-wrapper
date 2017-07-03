@@ -1,8 +1,8 @@
 {
   "name": "zinc-fetch",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "It's a node wrapper for zinc",
-  "main": "zinc.service.js",
+  "main": "zinc-fetch.js",
   "scripts": {
     "test": "mocha -S --ui bdd --recursive ./test --reporter spec"
   },
