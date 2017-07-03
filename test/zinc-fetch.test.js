@@ -7,7 +7,7 @@ const Bluebird = require('bluebird'),
          // your api key wherever you manage it
        zincKey = process.env.ZINC_KEY,
              _ = require('lodash'),
-   ZincFetch = require('../lib/zinc-fetch');
+   ZincFetch = require('../lib/zinc-fetch')(zincKey);
 
 describe('The zinc wrapper', () => {
 
