@@ -51,7 +51,7 @@ returns a Promise that resolves to an `order_response` or `error`
 
 ### Testing
 
-Just run `npm test` from the root directory. Make sure your api key is available on process.env or set it first, like `ZINC_CLIENT=12xxxxxxxYZ npm test`.
+Just run `npm test` from the root directory. Make sure your api key is available on process.env or set it first, like `ZINC_KEY=12xxxxxxxYZ npm test`.
 
 
 # License
