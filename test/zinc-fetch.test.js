@@ -28,7 +28,7 @@ describe('The zinc wrapper', () => {
 
     describe(`The product functions`, () => {
 
-        it(`should get product details `, (done) => {
+        it(`should get product details`, (done) => {
             if (zincKey) {
                 ZincFetch.product.getDetails('0060512806').then(response => {
                     should.exist(response);
@@ -37,6 +37,15 @@ describe('The zinc wrapper', () => {
                     should.equal('Cryptonomicon', response.title);
                     done();
                 });
+            }
+        });
+
+        it(`should get product details`, (done) => {
+          if (zincKey) {
+            ZincFetch.product.getPrices('0060512806').then(response => {
+                should.exist(response);  
+                done();
+              });
             }
         });
 
