@@ -12,20 +12,19 @@ It's a super lightweight module for making requests to the [zinc.io](http://docs
 # Usage
 
 ```javascript
-const ZincFetch = require('zinc-fetch');
+const ZincFetch = require('zinc-fetch')(YOUR_ZINC_API_KEY);
 
-function findCheapestPrice (itemId) {
-    return ZincService.product.getPrices(itemId)
-        .then(response => {
-            response.offers.each(candidateOffer => {
-                console.log(candidateOffer.price)
-                // ===> 13.37
-                console.log(candidateOffer.ship_price)
-                // ===> 4.22
-            }
-        });
+ZincService.product.getPrices(someItemId) // for an item at https://www.amazon.com/dp/1101904240, it's 1101904240
+    .then(response => {
+        response.offers.each(candidateOffer => {
+            console.log(candidateOffer.price)
+            // ===> 13.37
+            console.log(candidateOffer.ship_price)
+            // ===> 4.22
+            // plus many more fields you can find in Zinc's docs.
+        }
     });
-}
+});
 ```
 
 See [test cases](https://github.com/brianpgerson/zinc-wrapper/blob/master/test/zinc-fetch.test.js) for more examples.
