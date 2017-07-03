@@ -31,7 +31,6 @@ describe('The zinc wrapper', () => {
         it(`should get product details `, (done) => {
             if (zincKey) {
                 ZincFetch.product.getDetails('0060512806').then(response => {
-                    console.log('response')
                     should.exist(response);
                     should.equal('completed', response.status);
                     should.equal('amazon', response.retailer);
