@@ -15,7 +15,7 @@
   "dependencies": {
     "bluebird": "^3.5.0",
     "lodash": "^4.17.4",
-    "mocha": "^3.4.2",
+    "mocha": "^5.2.0",
     "node-fetch": "^1.7.1",
     "should": "^11.2.0",
     "sinon": "^1.17.7"
